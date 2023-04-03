@@ -19,9 +19,9 @@ services:
       - minio
     entrypoint: >
       /bin/sh -c "
-      /usr/bin/mc alias set myminio http://minio:9000 minio minio123;
-      /usr/bin/mc mb myminio/main;
-      /usr/bin/mc policy set public myminio/main;
+      /usr/bin/mc alias set main http://minio:9000 minio minio123;
+      /usr/bin/mc mb main/dagster;
+      /usr/bin/mc policy set public main/dagster;
       exit 0;
       "
 
